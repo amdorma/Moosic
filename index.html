@@ -3,16 +3,57 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-width">
     <title>Moosic | A Tempe-based Cover Band</title>
     <meta name="description" content="Moosic | A Tempe-based Cover Band">
     <meta name="author" content="Matt Malin">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
+    <header>
+        <!-- DESKTOP NAV -->
+        <nav id="desktop-header">
+            <ul class="header-nav">
+                <li id="logo">
+                    <a href="#">
+                        <img src="images/MOOSIC.png" alt="MOOSIC logo">
+                    </a>
+                </li>
+                <li id="about"><a class="header-link" href="#">About</a></li>
+                <li id="music"><a class="header-link" href="#">Music</a></li>
+                <li id="videos"><a class="header-link" href="#">Videos</a></li>
+                <li id="contact"><a class="header-link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- END DESKTOP NAV -->
+        <!-- MOBILE NAV MENU -->
+        <nav class="mobile-nav" id="mobile-header">
+            <div class="topnav">
+                <a href="#home" class="active"><img src="images/MOOSIC.png" alt="MOOSIC logo"></a>
+                <div id="mobile-links">
+                    <a href="#">About</a>
+                    <a href="#">Music</a>
+                    <a href="#">Videos</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </nav>
+        <!-- END MOBILE NAV MENU -->
+        <!-- HERO SECTION -->
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>Check Out Our New Album</h1>
+                <p>Bovine Bliss</p>
+                <button>Listen Now</button>
+            </div>
+        </div>
+        <!-- END HERO SECTION -->
+    </header>
 <script src="js/scripts.js"></script>
 </body>
 </html>

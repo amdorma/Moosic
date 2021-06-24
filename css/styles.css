@@ -1,0 +1,181 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* RESET CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* END CSS RESET */
+
+/* HEADER */
+.mobile-nav {
+    display: none;
+}
+
+html, body {
+    margin:none;
+    width:100%;
+}
+
+ul {
+    margin: 0px;
+}
+
+.header-nav {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 3fr repeat(4, 1fr) 1fr;
+    width: 100%;
+    height: 130px;
+}
+
+.header-link {
+    text-decoration: none;
+    color: black;
+}
+
+.header-nav li {
+    text-align: center;
+    z-index: 5;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+#about, #music, #videos, #contact {
+    margin: -20px 1px 7px 1px;
+    padding: 20px 0px 0px 0px;
+    transition: all .4s;
+    cursor: pointer;
+    align-self: center;
+}
+
+#logo {
+    align-self: center;
+}
+
+#about:hover, #music:hover, #videos:hover {
+    color: #333333;
+}
+/* END HEADER */
+
+/* HERO SECTION */
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Bovine-Bliss.png");
+    width: 100%;
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+/* END ERO SECTION */
+
+/* PHONE */
+@media screen and (max-width: 768px) {
+    /* MOBILE HAMBURGER MENU */
+    #desktop-header {
+        display: none;
+    }
+
+    #mobile-header {
+        display: block;
+        z-index: 7;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #fff;
+        position: relative;
+    }
+
+    .topnav #mobile-links {
+        display: none;
+        font-family: 'Lato', serif;
+        font-size: 1.4em;
+        font-weight: 300;
+        background-color:black
+    }
+
+    .topnav a {
+        color: #333;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 30px;
+        overflow: hidden;
+        color: white;
+        transition: all .4s;
+        margin:auto;
+    }
+
+    .topnav .icon:hover {
+        background-color: grey;
+        color: #ddd;
+    }
+/* END HAMBURGER */
+}
