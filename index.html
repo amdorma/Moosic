@@ -7,14 +7,13 @@
     <title>Moosic | A Tempe-based Cover Band</title>
     <meta name="description" content="Moosic | A Tempe-based Cover Band">
     <meta name="author" content="Matt Malin">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
-
+    <script src="https://kit.fontawesome.com/481b1b92ad.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <!-- DESKTOP NAV -->
+<!-- DESKTOP NAV -->
         <nav id="desktop-header">
             <ul class="header-nav">
                 <li id="logo">
@@ -22,14 +21,14 @@
                         <img src="images/MOOSIC.png" alt="MOOSIC logo">
                     </a>
                 </li>
-                <li id="about"><a class="header-link" href="#">About</a></li>
-                <li id="music"><a class="header-link" href="#">Music</a></li>
-                <li id="videos"><a class="header-link" href="#">Videos</a></li>
-                <li id="contact"><a class="header-link" href="#">Contact</a></li>
+                <li id="about-header"><a class="header-link" href="#">About</a></li>
+                <li id="music-header"><a class="header-link" href="#">Music</a></li>
+                <li id="videos-header"><a class="header-link" href="#">Videos</a></li>
+                <li id="contact-header"><a class="header-link" href="#">Contact</a></li>
             </ul>
         </nav>
-        <!-- END DESKTOP NAV -->
-        <!-- MOBILE NAV MENU -->
+<!-- END DESKTOP NAV -->
+<!-- MOBILE NAV MENU -->
         <nav class="mobile-nav" id="mobile-header">
             <div class="topnav">
                 <a href="#home" class="active"><img src="images/MOOSIC.png" alt="MOOSIC logo"></a>
@@ -43,17 +42,72 @@
                 </a>
             </div>
         </nav>
-        <!-- END MOBILE NAV MENU -->
-        <!-- HERO SECTION -->
+    </header>
+<!-- END MOBILE NAV MENU -->
+<!-- HERO SECTION -->
+    <body>
         <div class="hero-image">
             <div class="hero-text">
-                <h1>Check Out Our New Album</h1>
-                <p>Bovine Bliss</p>
-                <button>Listen Now</button>
+                <h1>Bovine Bliss</h1>
+                <h3>New Album</h3>
+                <button id="listen-button">Listen Now</button>
             </div>
         </div>
-        <!-- END HERO SECTION -->
-    </header>
+<!-- END HERO SECTION -->
+<!-- ABOUT SECTION -->
+        <div id="about">
+            <div id="about-left">
+                <h2>
+                    MOO[sic] is a band based out of Tempe, AZ
+                </h2>
+                <hr>
+                <p id="about-review">
+                    “I’d milk my own teets to this music if I had some, this is some of the greatest work I’ve ever heard in my entire life holy cow!”
+                </p>
+                <p>
+                    MOO[sic] is a solo project by Mac Donald. Mac Donald doesn't like to talk about himself very much. If you would like to listen to some of Mac Donald's music, go ahead. Mac Donald doesn't care if you do or don't. Why are you still lookin' at Mac Donald's wares? Go on, get.
+                </p>
+            </div>
+            <div id="about-right">
+                <img id="about-img" src="images/Bovine-Bliss.png">
+            </div>
+        </div>
+<!-- END ABOUT SECTION -->
+<!-- ALBUM SECTION -->
+        <div class="container">
+            <div class="music-player">
+                <div class="player">
+                    <img src="images/Bovine-Bliss.png" alt="album" class="record">
+                    <h2 id="title">Song Name</h2>
+                    <div class="slidecontainer">
+                        <i class="fas fa-volume-down"></i>
+                        <input type="range" min="0" max="100" value="50" class="slider">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="controls">
+                        <button class="previous jump" id="previous"><i class="fas fa-step-backward"></i></button>
+                        <button class="play-pause" id="play-pause"><i class="fas fa-play"></i></button>
+                        <button class="next jump" id="next"><i class="fas fa-step-forward"></i></button>
+                    </div>
+                </div>
+                <div class="playlist">
+                    <h2>Bovine Bliss</h2>
+                    <ul class="song-list">
+                        <li data-src="music/Together-forever.mp3" data-name="Together Forever" data-index="0" data-time="400"><span>Together Forever</span><span class="song-length">4:05</span></li>
+                        <li data-src="music/Together-forever.mp3" data-name="So Done With You" data-index="1"><span>So Done With You</span><span class="song-length">4:23</span></li>
+                        <li data-src="music/Together-forever.mp3" data-name="I Actually Still Love You" data-index="2"><span>I Actually Still Love You</span><span class="song-length">3:57</span></li>
+                        <li data-src="music/Together-forever.mp3" data-name="Call Me Back Please" data-index="3"><span>Call Me Back Please</span><span class="song-length">4:08</span></li>
+                        <li data-src="music/Together-forever.mp3" data-name="Bye Baby Bye" data-index="4"><span>Bye Baby Bye</span><span class="song-length">3:15</span></li>
+                        <li data-src="music/Together-forever.mp3" data-name="We Together" data-index="5"><span>We Together</span><span class="song-length">3:46</span></li>
+                        <li data-src="music/Together-forever.mp3" data-name="You Don't Really Love Me" data-index="6"><span>You Don't Really Love Me</span><span class="song-length">3:50</span></li>
+                    </ul>
+                    <audio src="" id="audio"></audio>
+                </div>
+                </div>
+            </div>
+        </div>
+<!-- END ABOUT SECTION -->
+    </body>
 <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -49,14 +49,37 @@ table {
 
 /* END CSS RESET */
 
+/* FONT STYLING */
+
+h1 {
+    font-family: 'Futura PT', sans-serif;
+    font-size: 6em;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: 'Futura PT', sans-serif;
+    font-size: 5em;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: 'Futura PT', sans-serif;
+    font-size: 3em;
+    font-weight: 400;
+}
+
+/* END FONT STYLING */
+
 /* HEADER */
 .mobile-nav {
     display: none;
 }
 
 html, body {
-    margin:none;
-    width:100%;
+    margin: auto;
+    width: 100%;
+    height: 100%;
 }
 
 ul {
@@ -84,7 +107,7 @@ ul {
     font-weight: 300;
 }
 
-#about, #music, #videos, #contact {
+#about-header, #music-header, #videos-header, #contact-header {
     margin: -20px 1px 7px 1px;
     padding: 20px 0px 0px 0px;
     transition: all .4s;
@@ -96,17 +119,17 @@ ul {
     align-self: center;
 }
 
-#about:hover, #music:hover, #videos:hover {
+a.header-link {
+    transition: all .4s;
+}
+
+a.header-link:hover {
     color: #333333;
 }
 /* END HEADER */
 
 /* HERO SECTION */
-body, html {
-    height: 100%;
-}
 
-/* The hero image */
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Bovine-Bliss.png");
     width: 100%;
@@ -124,7 +147,219 @@ body, html {
     transform: translate(-50%, -50%);
     color: white;
 }
-/* END ERO SECTION */
+
+#listen-button {
+    padding: 2% 4%;
+    margin:2%;
+    border: 0px;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 1.25em;
+    font-weight: 300;
+    transition: all .4s;
+}
+
+#listen-button:hover {
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* END HERO SECTION */
+
+/* ABOUT SECTION */
+
+#about {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 999px;
+    height:45vh;
+    margin:auto;
+}
+
+#about-left {
+    grid-column: 1/2;
+}
+
+#about-right {
+    align-self: center;
+    justify-content: center;
+    grid-column: 2/3
+}
+
+#about-img {
+    width: 90%;
+    margin:auto;
+}
+
+/* END ABOUT SECTION */
+
+/* MUSIC PLAYER SECTION */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+}
+
+.music-player {
+    display: flex;
+    flex-direction: row;
+    max-height: 450px;
+    width: 800px;
+}
+
+.player {
+    background:#abcdef;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.record {
+    width: 200px;
+    border-radius: 20px;
+    position: absolute;
+    top: -50px;
+}
+
+.record-animation {
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.player h2 {
+    color: #3c5e80;
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.slidecontainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.slidecontainer i {
+    color: #333;
+    font-size: 16px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    height: 10px;
+    background: #fff;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    border-radius: 10px;
+    margin:0 20px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.controls > button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+    padding: 20px;
+}
+
+.jump {
+    font-size: 30px;
+}
+
+#play-pause {
+    font-size: 50px;
+}
+
+.controls > button > i {
+
+    color: white;
+}
+
+.playlist {
+    flex: 1;
+    background: #f1f1f1;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.playlist h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.playlist ul {
+    flex-basis: 100%;
+    overflow-y: scroll;
+    padding: 0 5px;
+}
+
+.playlist ul li {
+    padding: 20px 20px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.playlist ul li.active {
+    font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #ccc;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #abcdef;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6f88a1;
+}
+
+/* END MUSIC PLAYER SECTION */
 
 /* PHONE */
 @media screen and (max-width: 768px) {
