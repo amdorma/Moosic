@@ -30,7 +30,7 @@ function loadAudio() {
  songHeading = songListItems[songIndex].getAttribute('data-name');
  title.innerText = songHeading;
 
- //Highlight
+ //HIGHLIGHT
     for(i=0; i<songListItems.length;i++){
         songListItems[i].classList.remove('active');
     }
@@ -78,7 +78,7 @@ function prevSong() {
     songIndex--;
     if(songIndex < 0) {
         songIndex = songArray.length - 1;
-    };
+    }
     loadAudio();
     playAudio();
 }
@@ -114,10 +114,20 @@ volSlider.addEventListener('input', function() {
     audio.volume = volSlider.value / 100;
 }, false);
 
-//Time calculation
+//SONG CALCULATION
+const songCount = document.getElementById('song-count');
+const liList = document.getElementsByClassName('song');
+
+let songNumber = liList.length
+
+songCount.innerText = songNumber;
+
+//TIME CALCULATION
+
+/*
 const songLength = document.querySelector('.song-length');
 
-let songTime = '';
+let songTime = e.target.closest('li').getAttribute('data-time');
 
 function timeGrab() {
     let songListItems = songList.getElementsByTagName('li');
@@ -129,7 +139,6 @@ function timeApply() {
 }
 
 function fancyTimeFormat(duration) {
-    duration =
     // Hours, minutes and seconds
     let hrs = ~~(duration / 3600);
     let mins = ~~((duration % 3600) / 60);
@@ -147,4 +156,4 @@ function fancyTimeFormat(duration) {
     return ret;
 }
 
-
+*/
