@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Moosic | A Tempe-based Cover Band</title>
-    <meta name="description" content="Moosic | A Tempe-based Cover Band">
+    <title>Moosic | A Tempe-based Moocore Band</title>
+    <meta name="description" content="Moosic | A Tempe-based Moocore Band">
     <meta name="author" content="Matt Malin">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/481b1b92ad.js" crossorigin="anonymous"></script>
@@ -18,24 +18,25 @@
             <ul class="header-nav">
                 <li id="logo">
                     <a href="#">
-                        <img src="images/MOOSIC.png" alt="MOOSIC logo">
+                        <img src="images/MOOSIC-logo.svg" alt="MOOSIC logo">
                     </a>
                 </li>
-                <li id="about-header"><a class="header-link" href="#">About</a></li>
-                <li id="music-header"><a class="header-link" href="#">Music</a></li>
-                <li id="videos-header"><a class="header-link" href="#">Videos</a></li>
-                <li id="contact-header"><a class="header-link" href="#">Contact</a></li>
+                <li id="about-header"><a class="header-link" href="#about">About</a></li>
+                <li id="videos-header"><a class="header-link" href="#album">Music</a></li>
+                <li id="music-header"><a class="header-link" href="#media">Photos</a></li>
+                <li id="contact-header"><a class="header-link" href="#contact">Contact</a></li>
             </ul>
         </nav>
 <!-- END DESKTOP NAV -->
 <!-- MOBILE NAV MENU -->
         <nav class="mobile-nav" id="mobile-header">
             <div class="topnav">
-                <a href="#home" class="active"><img src="images/MOOSIC.png" alt="MOOSIC logo"></a>
+                <a href="#" class="active"><img src="images/MOOSIC-logo.svg" alt="MOOSIC logo"></a>
                 <div id="mobile-links">
-                    <a href="#">About</a>
-                    <a href="#">Music</a>
-                    <a href="#">Videos</a>
+                    <a href="#about">About</a>
+                    <a href="#album">Music</a>
+                    <a href="#media">Photos</a>
+                    <a href="#contact">Contact</a>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
                     <i class="fa fa-bars"></i>
@@ -45,129 +46,175 @@
     </header>
 <!-- END MOBILE NAV MENU -->
 <!-- HERO SECTION -->
-    <body>
         <div class="hero-image">
             <div class="hero-text">
                 <h1>Bovine Bliss</h1>
-                <h3>New Album</h3>
-                <button id="listen-button">Listen Now</button>
+                <h3>Demo Album</h3>
+                <a href="#album"><button id="listen-button" >Listen Now</button></a>
             </div>
         </div>
 <!-- END HERO SECTION -->
 <!-- ABOUT SECTION -->
-        <div id="about">
-            <div id="about-left">
-                <h2>
-                    MOO[sic] is a band based out of Tempe, AZ
-                </h2>
-                <hr>
-                <p id="about-review">
-                    “I’d milk my own teets to this music if I had some, this is some of the greatest work I’ve ever heard in my entire life holy cow!”
-                </p>
-                <p>
-                    MOO[sic] is a solo project by Mac Donald. Mac Donald doesn't like to talk about himself very much. If you would like to listen to some of Mac Donald's music, go ahead. Mac Donald doesn't care if you do or don't. Why are you still lookin' at Mac Donald's wares? Go on, get.
-                </p>
-            </div>
-            <div id="about-right">
-                <img id="about-img" src="images/Bovine-Bliss.png">
+        <div class="about-container">
+            <div id="about">
+                <div id="about-left">
+                    <h3>
+                        MOO[sic] : A moocore band based out of Tempe, AZ
+                    </h3>
+                    <hr align="left">
+                    <p id="about-review">
+                        Bovine Bliss is a new work-in-progress album by MOO[sic].
+                    </p>
+                    <br/>
+                    <p>
+                        MOO[sic] is a solo project by Mac Donald. Mac Donald doesn't like to talk about himself very much. If you would like to listen to some of Mac Donald's music, go ahead. Mac Donald doesn't care if you do or don't. Why are you still lookin' at Mac Donald's wares? Go on, get. But listen to Bovine Bliss before you leave.
+                    </p>
+                </div>
+                <div id="about-right">
+                    <img id="about-img" src="images/Bovine-Bliss.png">
+                </div>
             </div>
         </div>
 <!-- END ABOUT SECTION -->
-<!-- ALBUM SECTION -->
-        <div class="container">
-            <div class="album-">
-
-            </div>
-            <div class="music-player">
-                <div class="player">
-                    <img src="images/bovine-cd.jpg" alt="album" class="record">
-                    <h2 id="title">Song Name</h2>
-                    <div class="slidecontainer">
-                        <i class="fas fa-volume-down"></i>
-                        <input type="range" min="0" max="100" value="50" class="slider">
-                        <i class="fas fa-volume-up"></i>
-                    </div>
-                    <div class="controls">
-                        <button class="previous jump" id="previous"><i class="fas fa-step-backward"></i></button>
-                        <button class="play-pause" id="play-pause"><i class="fas fa-play"></i></button>
-                        <button class="next jump" id="next"><i class="fas fa-step-forward"></i></button>
-                    </div>
-                </div>
-                <div class="playlist">
-                    <h2>Bovine Bliss</h2>
-                    <div class="album-info">
-                        <div class="info-left">
-                            <h3>Album time:</h3><span id="album-time">30m 49s</span>
-                        </div>
-                        <div class="info-right">
-                            <h3>Songs:</h3><span id="song-count">ERROR</span>
-                        </div>
-                    </div>
-                    <ul class="song-list">
-                        <li class="song" data-src="music/Together-forever.mp3" data-name="Together Forever" data-index="0" data-time="400"><span>Together Forever</span><span class="song-length" onload="">4:05</span></li>
-                        <li class="song" data-src="music/Together-forever.mp3" data-name="So Done With You" data-index="1"><span>So Done With You</span><span class="song-length">4:23</span></li>
-                        <li class="song" data-src="music/Together-forever.mp3" data-name="I Actually Still Love You" data-index="2"><span>I Actually Still Love You</span><span class="song-length">3:57</span></li>
-                        <li class="song" data-src="music/Together-forever.mp3" data-name="Call Me Back Please" data-index="3"><span>Call Me Back Please</span><span class="song-length">4:08</span></li>
-                        <li class="song" data-src="music/Together-forever.mp3" data-name="Bye Baby Bye" data-index="4"><span>Bye Baby Bye</span><span class="song-length">3:15</span></li>
-                        <li class="song" data-src="music/Together-forever.mp3" data-name="We Together" data-index="5"><span>We Together</span><span class="song-length">3:46</span></li>
-                        <li class="song" data-src="music/Together-forever.mp3" data-name="You Don't Really Love Me" data-index="6"><span>You Don't Really Love Me</span><span class="song-length">3:50</span></li>
-                    </ul>
-                    <audio src="" id="audio"></audio>
-                </div>
-                </div>
-        </div>
-<!-- END ALBUM SECTION -->
 <!-- MUSIC VID SECTION -->
         <div class="vid-container">
             <div class='embed-container'>
-                <iframe src='https://www.youtube.com/embed/AdCiMo54BsQ' frameborder='0' allowfullscreen></iframe>
+                <iframe src='https://www.youtube.com/embed/E4gnmYwhup0' allowfullscreen></iframe>
             </div>
         </div>
 <!-- END MUSIC VID SECTION -->
+<!-- ALBUM SECTION -->
+        <div class="album-container" id="album">
+            <!-- <h2 id="album">ALBUM</h2> -->
+            <div class="container">
+                <div class="album-highlight">
+                    <div class="album-description">
+                        <h3>Bovine Bliss</h3>
+                        <hr align="left";/>
+                        <h4>RELEASE DATE: TBA</h4>
+                        <h4>Cowpital Records</h4>
+                        <img src="images/bovine-bliss-album-transparent.png" alt="Bovine Bliss Album"/>
+                        <p>
+                            Bovine Bliss is  rich, sweet, creamy frozen album made from variously flavored cream and milk products churned and stirred to a smooth consistency during the freezing process. You can expect to hear a generous helping of gelatin, eggs, fruits, nuts, and more in each and every song. The definition of Bovine Bliss is a soft, frozen treat made from milk fat.
+                        </p>
+                    </div>
+                </div>
+                <div class="music-player">
+                    <div class="player">
+                        <img src="images/bovine-cd.png" alt="album" class="record">
+                        <h2 id="title">Song Name</h2>
+                        <div class="slidecontainer">
+                            <i class="fas fa-volume-down"></i>
+                            <input type="range" min="0" max="100" value="50" class="slider">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                        <div class="controls">
+                            <button class="previous jump" id="previous"><i class="fas fa-step-backward"></i></button>
+                            <button class="play-pause" id="play-pause"><i class="fas fa-play"></i></button>
+                            <button class="next jump" id="next"><i class="fas fa-step-forward"></i></button>
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <h2>Bovine Bliss</h2>
+                        <div class="album-info">
+                            <div class="info-left">
+                                <h3>Album time:</h3><span id="album-time">ERROR</span>
+                            </div>
+                            <div class="info-right">
+                                <h3>Songs:</h3><span id="song-count">ERROR</span>
+                            </div>
+                        </div>
+                        <ul class="song-list">
+                            <!-- ENTER SONG LENGTH IN SECONDS UNDER DATA-TIME FOR ALBUM LENGTH CALCULATION -->
+                            <li class="song" data-src="music/Together-forever.mp3" data-name="Together Forever" data-index="0" data-time="245"><span>Together Forever</span><span class="song-length" onload="">4:05</span></li>
+                            <li class="song" data-src="music/Together-forever.mp3" data-name="So Done With You" data-index="1" data-time="263"><span>So Done With You</span><span class="song-length">4:23</span></li>
+                            <li class="song" data-src="music/Together-forever.mp3" data-name="I Actually Still Love You" data-index="2" data-time="237"><span>I Actually Still Love You</span><span class="song-length">3:57</span></li>
+                            <li class="song" data-src="music/Together-forever.mp3" data-name="Call Me Back Please" data-index="3" data-time="248"><span>Call Me Back Please</span><span class="song-length">4:08</span></li>
+                            <li class="song" data-src="music/Together-forever.mp3" data-name="Bye Baby Bye" data-index="4" data-time="215"><span>Bye Baby Bye</span><span class="song-length">3:15</span></li>
+                            <li class="song" data-src="music/Together-forever.mp3" data-name="We Together" data-index="5" data-time="226"><span>We Together</span><span class="song-length">3:46</span></li>
+                            <li class="song" data-src="music/Together-forever.mp3" data-name="You Don't Really Love Me" data-index="6" data-time="230"><span>You Don't Really Love Me</span><span class="song-length">3:50</span></li>
+                        </ul>
+                        <audio src="" id="audio"></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- END ALBUM SECTION -->
 <!-- MEDIA GRID SECTION -->
-        <div class="media-grid">
-            <h1>PICS</h1>
-            <div class="myGallery">
-                <div class="item">
-                    <img src="images/cow-love.jpg" />
-                    <span class="caption">The ol cow love</span>
-                </div>
-                <div class="item">
-                    <img src="images/bovine-rescue.jpg" />
-                    <span class="caption">The ol cow love</span>
-                </div>
-                <div class="item">
-                    <img src="images/neigh-cow.jpg" />
-                    <span class="caption">The ol cow love</span>
-                </div>
-                <div class="item">
-                    <img src="images/cow-love.jpg" />
-                    <span class="caption">The ol cow love</span>
-                </div>
-                <div class="item">
-                    <img src="images/pool-cow-cow.jpg" />
-                    <span class="caption">The ol cow love</span>
-                </div>
-                <div class="item">
-                    <img src="images/simba-cow.jpg" />
-                    <span class="caption">The ol cow love</span>
-                </div>
-                <div class="item">
-                    <img src="images/cow-love.jpg" />
-                    <span class="caption">The ol cow love</span>
-                </div>
-                <div class="item">
-                    <img src="images/pool-cow.jpg" />
-                    <span class="caption">The ol cow love</span>
-                </div>
-                <div class="item">
-                    <img src="images/cow-love.jpg" />
-                    <span class="caption">The ol cow love</span>
+        <div class="pic-container" id="media">
+            <div class="media-grid">
+                <!-- <h2>PHOTOS</h2> -->
+                <div class="myGallery">
+                    <div class="item">
+                        <img src="images/cow-love.jpg" alt="Two Cows Hugging"/>
+                        <span class="caption center">The ol cow love</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/bovine-rescue.jpg" alt="One cow rescues another"/>
+                        <span class="caption center">The great cow rescue</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/neigh-cow.jpg" alt="Neighing cow"/>
+                        <span class="caption center">Strong enough to pull a cart</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/bovine-bliss-album.jpg" alt="Album art for Bovine Bliss"/>
+                        <span class="caption center">Remember to pick up the demo</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/pool-cow-cow.jpg" alt="One cow rescues another part 2"/>
+                        <span class="caption center">The great cow rescue v2</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/simba-cow.jpg" alt="One cow holding another up"/>
+                        <span class="caption center">Gentle enough to fly in the sky</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/cow-love.jpg" alt="Two Cows Hugging"/>
+                        <span class="caption center">The ol cow love</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/pool-cow.jpg" alt="One cow cleans a pool"/>
+                        <span class="caption center">Cleaning up the cow fur</span>
+                    </div>
+                    <div class="item">
+                        <img src="images/cow-love.jpg" alt="Two Cows Hugging"/>
+                        <span class="caption center">The ol cow love</span>
+                    </div>
                 </div>
             </div>
         </div>
 <!-- END MEDIA GRID SECTION -->
-    </body>
-<script src="js/scripts.js"></script>
+<!-- FORM SECTION -->
+        <div class="form-background">
+            <div id="contact" class="form-container">
+                <h2>FEEDBACK</h2>
+                <form action="#" name="contact_form">
+                    <label for="name"></label>
+                    <input name="first_name" type="text" required placeholder="NAME"/>
+                    <br>
+                    <label for="email"></label>
+                    <input name="email" type="email" required placeholder="EMAIL"/>
+                    <br>
+                    <label for="message"></label><br>
+                    <textarea name="message" cols="30" rows="10" placeholder="Let Mac Donald know what you do or don't like about his music. Mac Donald won't reply though, Mac Donald don't care. Mac Donald already knows his music is perfect." required></textarea>
+                    <div class="center">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+<!-- END FORM SECTION -->
+    <footer>
+        <div class="footer-container">
+            <img src="images/MOOSIC-logo.svg" alt="logo" />
+        </div>
+        <div class="copyright">
+            <p>
+                ©MOO[sic] 2021
+            </p>
+        </div>
+    </footer>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

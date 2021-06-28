@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -50,13 +52,17 @@ table {
 /* END CSS RESET */
 
 /* FONT STYLING */
-
 h1, p {
     text-align: center;
 }
 
-p, span, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Futura PT', sans-serif;
+hr {
+    max-width: 50px;
+    border-top: 3px solid #ccc;
+}
+
+button, p, span, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Hind', sans-serif;
 }
 
 h1 {
@@ -74,6 +80,10 @@ h3 {
     font-weight: 400;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* END FONT STYLING */
 
 /* HEADER */
@@ -88,7 +98,7 @@ html, body {
 }
 
 ul {
-    margin: 0px;
+    margin: 0;
 }
 
 .header-nav {
@@ -101,7 +111,7 @@ ul {
 
 .header-link {
     text-decoration: none;
-    color: black;
+    color: #1D1915;
 }
 
 .header-nav li {
@@ -112,16 +122,16 @@ ul {
     font-weight: 300;
 }
 
-#about-header, #music-header, #videos-header, #contact-header {
-    margin: -20px 1px 7px 1px;
-    padding: 20px 0px 0px 0px;
-    transition: all .4s;
-    cursor: pointer;
+.header-nav li {
     align-self: center;
 }
 
 #logo {
     align-self: center;
+}
+
+#logo a img {
+    max-height: 80px;
 }
 
 a.header-link {
@@ -136,7 +146,7 @@ a.header-link:hover {
 /* HERO SECTION */
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Bovine-Bliss.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/pool-cow.jpg");
     width: 100%;
     height: 90vh;
     background-position: center;
@@ -156,8 +166,7 @@ a.header-link:hover {
 #listen-button {
     padding: 2% 4%;
     margin:2%;
-    border: 0px;
-    font-family: 'Futura PT', sans-serif;
+    border: 0;
     font-size: 1.25em;
     font-weight: 300;
     transition: all .4s;
@@ -165,47 +174,87 @@ a.header-link:hover {
 
 #listen-button:hover {
     color: white;
-    background-color: black;
+    background-color: #4E4337;
+    border: white solid 2px;
     border-radius: 10px;
     cursor: pointer;
 }
 /* END HERO SECTION */
 
 /* ABOUT SECTION */
+.about-container {
+    padding: 5%;
+    background: url("../images/Cow-print-background.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 
 #about {
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
+    display:flex;
+    flex-direction: row;
     max-width: 999px;
-    height:45vh;
     margin:auto;
+    justify-content: space-between;
+
+}
+
+#about-left h3, .album-description h3 {
+    font-size: 1.75em;
+    font-weight: 500;
 }
 
 #about-left {
-    grid-column: 1/2;
+    max-width: 500px;
 }
 
-#about-right {
+#about-left p {
+    text-align: left;
+}
+
+#about-right, #about-left {
     align-self: center;
     justify-content: center;
-    grid-column: 2/3
+    margin: 20px;
 }
 
 #about-img {
-    width: 90%;
+    max-width: 400px;
     margin:auto;
 }
 
 /* END ABOUT SECTION */
 
 /* MUSIC PLAYER SECTION */
+
+.album-container {
+    padding: 10% 5%;
+    background: url("../images/Cow-print-background-album.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.album-description img {
+    max-width: 100%;
+}
+
+.album-description {
+    max-width: 320px;
+}
+
+.album-description p {
+    text-align: left;
+}
+
 .container {
     display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
+    flex-direction: row;
+    max-width: 999px;
+    justify-content: space-between;
     align-items: center;
-    background: #333;
+    margin:auto;
 }
 
 .music-player {
@@ -219,7 +268,7 @@ a.header-link:hover {
     background:url("../images/bovine-rescue.jpg");
     background-repeat: no-repeat;
     background-size: 500px;
-    padding: 3em;
+    padding: 10% 5% 0 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -231,10 +280,12 @@ a.header-link:hover {
 }
 
 .record {
-    width: 200px;
+    width: 150px;
     border-radius: 50%;
     position: absolute;
-    top: -150px;
+    top: -90px;
+    -webkit-box-shadow: 0 0 16px 0 rgba(0,0,0,0.41);
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.41);
 }
 
 .record-animation {
@@ -315,7 +366,6 @@ a.header-link:hover {
 }
 
 .controls > button > i {
-
     color: white;
 }
 
@@ -328,6 +378,8 @@ a.header-link:hover {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     max-height: 300px;
+    -webkit-box-shadow: 0 0 16px 3px rgba(0,0,0,0.41);
+    box-shadow: 0 0 16px 3px rgba(0,0,0,0.41);
 }
 
 .album-info {
@@ -351,7 +403,7 @@ a.header-link:hover {
 }
 
 .playlist ul li {
-    padding: 15px 20px 15px 0px;
+    padding: 15px 20px 15px 0;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -409,8 +461,20 @@ a.header-link:hover {
 }
 
 /* END MUSIC VIDEO SECTION */
-
 /* MEDIA GRID SECTION */
+
+.pic-container {
+    padding: 10% 5%;
+    background: url("../images/Cow-print-background-pics.svg") #4E4337;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.media-grid h2 {
+    color: #dbcfcc;
+    text-align: center;
+    padding-bottom: 5%;
+}
 
 .media-grid {
     max-width: 999px;
@@ -459,8 +523,123 @@ a.header-link:hover {
 
 /* END MEDIA GRID SECTION */
 
+/* CONTACT FORM SECTION */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container h2 {
+    padding: 5%;
+    text-align: center;
+    font-size: 2em;
+}
+
+.form-background {
+    background: url("../images/Cow-print-background-pics.svg") #4E4337;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 5% 10% 5%;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 12px 24px 24px 24px;
+    background: #a79b95;
+    border-radius: 4px;
+}
+
+label {
+    font-size: 0.85em;
+    margin-left: 12px;
+}
+
+input[type=text],input[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    resize: vertical;
+    text-align: left;
+}
+
+::placeholder {
+    text-align: left;
+}
+
+textarea {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+input[type=text]:focus,input[type=email]:focus, textarea:focus {
+    border: 1px solid #1D1915;
+}
+
+input[type=submit] {
+    background: #4E4337;
+    margin: 0 auto;
+    outline: 0;
+    color: white;
+    border: 0;
+    padding: 12px 24px;
+    transition: all 0.4s;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Add styles for 'focus' property */
+input[type=submit]:focus {
+    background: #ccc;
+    color: #333;
+    border-radius: 8px;
+}
+
+/* Style 'hover' property */
+input[type=submit]:hover {
+    background: #1D1915;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+/* END CONTACT FORM SECTION */
+/* FOOTER SECTION */
+
+.footer-container {
+    margin: auto;
+    padding: 8%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container img {
+    max-width: 500px;
+}
+
+.copyright {
+    background: #d7cac5;
+    padding: 1%;
+    color: #1D1915;
+}
+
+/* END FOOTER SECTION */
 /* PHONE */
 @media screen and (max-width: 768px) {
+    /* GENERAL FONT STYLE */
+    h1 {
+        font-size: 5.5em;
+    }
+    /* END FONT STYLE */
+
     /* MOBILE HAMBURGER MENU */
     #desktop-header {
         display: none;
@@ -471,22 +650,30 @@ a.header-link:hover {
         z-index: 7;
     }
 
+    .active img {
+        height: 47px;
+    }
+
     .topnav {
         overflow: hidden;
         background-color: #fff;
         position: relative;
     }
 
+    #mobile-links a {
+        text-align: center;
+    }
+
     .topnav #mobile-links {
         display: none;
-        font-family: 'Lato', serif;
-        font-size: 1.4em;
+        font-family: 'Hind', sans-serif;
+        font-size: 1.6em;
         font-weight: 300;
-        background-color:black
+        background-color:#1D1915
     }
 
     .topnav a {
-        color: #333;
+        color: #ccc;
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
@@ -494,7 +681,7 @@ a.header-link:hover {
     }
 
     .topnav a.icon {
-        background: black;
+        background: #1D1915;
         display: block;
         position: absolute;
         right: 0;
@@ -511,4 +698,60 @@ a.header-link:hover {
         color: #ddd;
     }
 /* END HAMBURGER */
+/* ABOUT SECTION */
+    #about {
+        flex-direction: column-reverse;
+        padding: 20% 0;
+    }
+
+    #about-left {
+        min-width: 300px;
+    }
+
+    #about-img {
+        max-width: 300px;
+    }
+
+/* END ABOUT SECTION */
+/* ALBUM SECTION */
+    .album-highlight {
+        margin-bottom: 20%;
+    }
+
+    .album-description img{
+        min-width: 300px;
+        max-width: 300px;
+    }
+
+    .album-container {
+        padding: 20% 5%;
+        background: url("../images/Cow-print-background-album-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .music-player {
+        width:100%;
+        min-width: 300px;
+        max-width: 350px;
+    }
+
+    .player h2 {
+        font-size: 25px;
+    }
+
+    .record {
+        height: 100px;
+        width: 100px;
+        top: -50px;
+    }
+
+/* END ALBUM SECTION */
+
 }
+/* END MOBILE */

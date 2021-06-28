@@ -123,20 +123,7 @@ let songNumber = liList.length
 songCount.innerText = songNumber;
 
 //TIME CALCULATION
-
-/*
-const songLength = document.querySelector('.song-length');
-
-let songTime = e.target.closest('li').getAttribute('data-time');
-
-function timeGrab() {
-    let songListItems = songList.getElementsByTagName('li');
-    songTime = songListItems[songIndex].getAttribute('data-time');
-}
-
-function timeApply() {
-    songLength.innerText = songTime;
-}
+const albumTime = document.getElementById('album-time');
 
 function fancyTimeFormat(duration) {
     // Hours, minutes and seconds
@@ -156,4 +143,28 @@ function fancyTimeFormat(duration) {
     return ret;
 }
 
-*/
+let timeArray = [];
+
+function loadTimes() {
+    let songs = songList.getElementsByClassName('song');
+    for(i=0;i<songs.length;i++) {
+        timeArray.push(songs[i].getAttribute('data-time'));
+    }
+    return timeArray;
+}
+
+loadTimes()
+
+function convertNumber() {
+    timeArray = timeArray.map(Number);
+}
+
+convertNumber();
+
+let totalTime = timeArray.reduce((a, b) => {
+    return a + b;
+});
+
+let prettyTime = fancyTimeFormat(totalTime);
+
+albumTime.innerText = prettyTime;
