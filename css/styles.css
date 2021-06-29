@@ -622,8 +622,8 @@ input[type=submit]:hover {
     justify-content: center;
 }
 
-.footer-container img {
-    max-width: 500px;
+.footer-container a img {
+    width: 500px;
 }
 
 .copyright {
@@ -763,6 +763,11 @@ input[type=submit]:hover {
     }
 
 /* END ALBUM SECTION */
+/* FOOTER SECTION */
+    .footer-container a img {
+        width: 100%;
+    }
+/* END FOOTER SECTION */
 
 }
 /* END MOBILE */
