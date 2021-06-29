@@ -117,9 +117,9 @@ ul {
 .header-nav li {
     text-align: center;
     z-index: 5;
-    font-family: 'Futura PT', sans-serif;
+    font-family: 'Hind', sans-serif;
     font-size: 1.6em;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .header-nav li {
@@ -139,7 +139,7 @@ a.header-link {
 }
 
 a.header-link:hover {
-    color: #333333;
+    color: #9c8a77;
 }
 /* END HEADER */
 
@@ -569,6 +569,7 @@ input[type=text],input[type=email], textarea {
 
 ::placeholder {
     text-align: left;
+    font-family: 'Hind', sans-serif;
 }
 
 textarea {
