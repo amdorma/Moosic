@@ -408,8 +408,8 @@ a.header-link:hover {
     justify-content: space-between;
     cursor: pointer;
     border-bottom: 1px solid #ddd;
-    font-family: 'Futura PT', sans-serif;
-    font-weight: 300;
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
 }
 
 .playlist ul li.active {
@@ -635,6 +635,16 @@ input[type=submit]:hover {
 /* END FOOTER SECTION */
 /* PHONE */
 @media screen and (max-width: 768px) {
+    /* GENERAL CONTAINER STYLING */
+    .pic-container {
+        padding: 20% 5%;
+    }
+
+    .form-background {
+        padding: 0 5% 20% 5%;
+    }
+    /* END GENERAL CONTAINER STYLING */
+
     /* GENERAL FONT STYLE */
     h1 {
         font-size: 5.5em;
