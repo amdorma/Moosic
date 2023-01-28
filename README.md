@@ -1,9 +1,9 @@
-![Moosic Preview](https://github.com/elisemalin/Moosic/blob/master/moosic-header.jpg)
-
 # Moosic
 A hypothetical band from Tempe AZ
 
 Check out the <a href="https://elisemalin.github.io/Moosic/">hypothetical site</a> for a hypothetical band!
+
+![Moosic Preview](https://github.com/elisemalin/Moosic/blob/master/moosic-header.jpg)
 
 # Why?
 This was a technical test for a job I applied for. I was given the task to make a page for a hypothetical band named Moosic that had a working JavaScript player that could dynamically count the total amount of tracks and total album time as well as have a volume slider and play/pause functionality. They also wanted a contact form implemented.
