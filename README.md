@@ -1,3 +1,5 @@
+![Moosic Preview](https://github.com/elisemalin/Moosic/blob/master/moosic-header.jpg)
+
 # Moosic
 A hypothetical band from Tempe AZ
 
